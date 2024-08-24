@@ -63,7 +63,7 @@ public class EmployeeServiceImpl implements EmployeeService {
             Employee employeeToUpdate = initialemployeeRequest.toEmployee();
             Employee existingEmployee = employeeRepository.findEmployeeByUsername(initialemployeeRequest.getUsername());
             if (existingEmployee == null) {
-                log.info("This employee cannot be found!");
+                log.info("This employee cannot be found !");
                 throw new NotFoundException("Employee does not exist!");
             }
             EmployeeManagementBeanUtil.copyProperties(employeeToUpdate, existingEmployee);
