@@ -48,7 +48,7 @@ public class RoleServiceImpl implements RoleService {
         Role existingRole = roleRepository.findRoleByRoleId(roleId);
         if (existingRole == null) {
             logger.info("This role cannot be found");
-            throw new NotFoundException("Role not found");
+            throw new NotFoundException("Role not found !");
         }
         logger.info("Fetching an existing role by roleId response: {}", existingRole);
         return RoleResponse.fromRole(existingRole);
