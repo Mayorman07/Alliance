@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "roles")
-public class Roles {
+public class Role {
 
     @Id
 
@@ -18,8 +18,6 @@ public class Roles {
     private String status;
     private String roleId;
 
-    private Timestamp createdAt;
-    private Timestamp updatedAt;
 
     public Long getId() {
         return id;
@@ -53,19 +51,4 @@ public class Roles {
         this.roleId = roleId;
     }
 
-    public Timestamp getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Timestamp createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Timestamp getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Timestamp updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 }
