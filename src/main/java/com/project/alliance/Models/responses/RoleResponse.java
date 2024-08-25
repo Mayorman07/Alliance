@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @Builder
 public class RoleResponse {
-    private Long id;
+
     private String role;
     private String roleId;
     private String status;

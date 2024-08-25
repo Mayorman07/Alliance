@@ -27,11 +27,12 @@ public class RoleController {
     private final RoleService rolesService;
     private final Logger logger = LogManager.getLogger(RoleController.class);
 
-    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(path = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public List<RoleResponse> createRole(@Valid @RequestBody List<RoleRequest> roleRequest,
                                          BindingResult bindingResult) throws Exception {
         logger.info("Create role request: {}", roleRequest);
         InputValidator.validate(bindingResult);
+        logger.info("Create role request Teo: {}", roleRequest);
         List<RoleResponse> rolesResponse = rolesService.createRole(roleRequest);
         logger.info("Create role response: {}", rolesResponse);
         return rolesResponse;
