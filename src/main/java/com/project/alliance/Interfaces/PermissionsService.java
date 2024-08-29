@@ -9,7 +9,7 @@ import java.util.List;
 public interface PermissionsService {
 
     List<PermissionResponse> createPermission(List<PermissionRequest> permissionsRequest) throws Exception;
-//    PermissionResponse findByPermissionId(String roleId) throws JsonProcessingException;
+    PermissionResponse findByPermissionId(String roleId) throws JsonProcessingException;
 //    PermissionResponse getPermission(String permissionId);
     List<PermissionResponse> fetchPermissions();
 }
