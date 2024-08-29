@@ -1,0 +1,5 @@
+FROM openjdk:17-jdk-slim
+WORKDIR /src/main/java/com/project/config-server
+COPY target/shared-config-server-0.0.1-SNAPSHOT.jar shared-config-server.jar
+EXPOSE 8012
+ENTRYPOINT ["java", "-jar", "shared-config-server.jar"]
